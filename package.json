@@ -2,9 +2,8 @@
   "name": "hardhat-docker",
   "scripts": {
     "start:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js node",
-    "deploy:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js --network localhost my-deploy",
-    "test:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js test",
-    "compile:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js compile"
+    "compile:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js compile",
+    "deploy:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js --network localhost deploy"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
