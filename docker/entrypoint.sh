@@ -6,6 +6,9 @@ cd /usr/src/app;
 # Run hardhat
 yarn start:local;
 
+yarn compile:local;
+yarn deploy:local;
+
 # Keep node alive
 set -e
 if [ "${1#-}" != "${1}" ] || [ -z "$(command -v "${1}")" ]; then

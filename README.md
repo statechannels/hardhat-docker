@@ -28,18 +28,6 @@ docker logs hardhat
 # Should see an output of wallet addresses and private keys
 ```
 
-4. Compile local contract within Docker
-
-```bash
-docker exec -it hardhat yarn compile:local
-```
-
-5. Deploy local contract within Docker with custom task
-
-```bash
-docker exec -it hardhat yarn deploy:local
-```
-
 Voilà!
 
 Don't forget to delete your container when you're done.
