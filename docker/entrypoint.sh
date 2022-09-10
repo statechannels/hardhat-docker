@@ -3,15 +3,16 @@
 # Change to the correct directory
 cd /usr/src/app;
 
-# Run hardhat
-yarn start:local;
-
+# Compile contracts
 yarn compile:local;
+# Start hardhat node as a background process
+yarn start:local &
+# Wait for hardhat node to initialize. There doesn't seem to be a signal from hardhat node
+# to indicate initialization
+sleep 5;
+# Deploy contracts
 yarn deploy:local;
 
-# Keep node alive
-set -e
-if [ "${1#-}" != "${1}" ] || [ -z "$(command -v "${1}")" ]; then
-  set -- node "$@"
-fi
-exec "$@"
+# The hardhat node process never completes
+# Waiting prevents the container from pausing
+wait $!
