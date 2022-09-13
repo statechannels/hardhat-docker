@@ -2,18 +2,12 @@
   "name": "hardhat-docker",
   "scripts": {
     "start:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js node",
-    "compile:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js compile",
     "deploy:local": "./node_modules/.bin/hardhat --config hardhat.config.local.js --network localhost deploy"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "@openzeppelin/contracts": "^3.4.2",
-    "@statechannels/exit-format": "^0.0.6",
-    "chai": "^4.3.4",
     "dotenv": "^10.0.0",
-    "ethereum-waffle": "^3.4.0",
     "ethers": "^5.4.7",
-    "hardhat": "^2.6.4"
+    "hardhat": "2.11.1"
   }
 }
