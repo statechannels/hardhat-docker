@@ -4,9 +4,7 @@ COPY . /usr/src/app
 
 WORKDIR /usr/src/app
 
-RUN apk add git;
-
-RUN yarn install --non-interactive
+RUN yarn install --non-interactive --frozen-lockfile
 
 COPY $PWD/docker/entrypoint.sh /usr/local/bin
 
