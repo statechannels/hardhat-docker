@@ -29,6 +29,8 @@ module.exports = {
   solidity: "0.7.6",
   networks: {
     hardhat: {
+      // Provide a large amount of funded accounts for large scale tests
+      accounts: {count:1000},
       chainId: 1337,
     },
   },
