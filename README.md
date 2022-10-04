@@ -1,4 +1,4 @@
-# Dockerized hardhat with Nitro contracts deployed
+# Dockerized hardhat with Create2Deployer contract deployed
 
 ## Requirements
 
