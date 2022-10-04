@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-ethers");
 const fs = require("fs");
-const { bytecode } = require("./NitroAdjudicator.json");
+const { bytecode } = require("./Create2Deployer.json");
 
 task(
   "deploy",
@@ -16,7 +16,7 @@ task(
 
     // Write file
     fs.writeFileSync("./.contract", na.address);
-  }
+  },
 );
 
 // You need to export an object to set up your config
@@ -30,7 +30,7 @@ module.exports = {
   networks: {
     hardhat: {
       // Provide a large amount of funded accounts for large scale tests
-      accounts: {count:1000},
+      accounts: { count: 1000 },
       chainId: 1337,
     },
   },
