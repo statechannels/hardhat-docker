@@ -24,7 +24,7 @@ docker run -it -d -p 8545:8545 --name hardhat hardhat
 3. Verify that container is running
 
 ```bash
-docker logs hardhat
+docker logs --follow hardhat
 # Should see an output of wallet addresses and private keys
 ```
 
